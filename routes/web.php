@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['uses' => 'Admin\IndexController@show', 'as' => 'home']);
 
 Route::get('/page', function () {
     echo "<pre>";
